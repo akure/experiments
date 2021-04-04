@@ -16,7 +16,8 @@ class Der2 :   public virtual Base {
 public: 
 };
 
-
+// I think that, the compiler will create two pointers in join object. 
+// One is to point to the Der1 object and one for Der2. So its size is coming as 16
 class Join : public Der1 , public Der2 {
 public:
   // ...
