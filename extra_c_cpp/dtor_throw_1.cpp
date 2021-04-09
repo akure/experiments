@@ -1,6 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
+
+/* 
+This program will have output.
+ 
+output in c++98:    
+calling f 
+ctor
+dtor
+ 
+ output in c++11: 
+main.cpp:16:15: note: in C++11 destructors default to noexcept                                                                                                                     
+ calling f                                                                                                                                                                         
+ ctor                                                                                                                                                                              
+dtor                                                                                                                                                                               
+terminate called after throwing an instance of 'char const*'                                                                                                                       
+Aborted (core dumped)       
+
+
+*/
+
 class Bomb { 
     // bad class throws exception from destructor
     int x;
